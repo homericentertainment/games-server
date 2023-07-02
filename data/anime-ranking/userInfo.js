@@ -6,7 +6,7 @@ const userSchema = new Schema({
         type:String,
         required:true
     },
-    savedAnime:{
+    saved:{
         type:Object,
         required:true,
     }
