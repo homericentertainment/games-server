@@ -8,7 +8,8 @@ const userSchema = new Schema({
     },
     saved:{
         type:Object,
-        required:true,
+        required:false,
+        default:{}
     }
     
 }, { timestamps: true, minimize: false })

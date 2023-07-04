@@ -6,12 +6,8 @@ const eventSchema = new Schema({
         type: String,
         required: true
     },
-    votes: {
-        type: Object,
-        required: true,
-    },
     participants: {
-        type: Array,
+        type: Object,
         required: true,
     },
     voters: {
