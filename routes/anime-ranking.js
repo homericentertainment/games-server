@@ -4,7 +4,7 @@ const AnimeRankingUserInfo = require('../data/anime-ranking/userInfo')
 const AnimeRankingEventInfo = require('../data/anime-ranking/eventInfo')
 const AnimeRankingAnimeInfo = require('../data/anime-ranking/animeInfo')
 
-// generateNewEvent()
+ generateNewEvent()
 
 
 router.get('/get-user/:id', async (req, res) => {
