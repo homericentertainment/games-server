@@ -24,7 +24,7 @@ if (process.env.NODE_ENV !== 'production') app.use(morgan('dev'))
 
 const corsOptions = {
   origin: process.env.NODE_ENV === 'production' ?
-    ['https://d26z2m6nm787p2.cloudfront.net', 'https://d26z2m6nm787p2.cloudfront.net/', 'https://d3d4bwbgnbrnq1.cloudfront.net', 'https://d3d4bwbgnbrnq1.cloudfront.net/', "https://pikme.tv",'http://localhost:19000'] :
+    '*' :
     ['http://localhost:3000', 'http://localhost:3000/', 'http://localhost:3001', 'http://localhost:3001/','http://localhost:19000'],
   credentials: true
 }
