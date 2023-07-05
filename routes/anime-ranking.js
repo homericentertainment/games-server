@@ -8,9 +8,9 @@ router.get('/get-user/:id', async (req, res) => {
     const { id } = req.params
     try {
         const user = await AnimeRankingUserInfo.findOne({ id })
-        res.json(user)
+        return res.json(user)
     } catch (err) {
-        res.status(400).send('Something went wrong')
+        return res.status(400).send('Something went wrong')
     }
 })
 
@@ -21,10 +21,10 @@ router.post('/create-user', async (req, res) => {
             name: user.name,
         })
         await newUser.save()
-        res.json(newUser)
+        return res.json(newUser)
     } catch (err) {
         console.log(err)
-        res.status(400).send('Something went wrong')
+        return res.status(400).send('Something went wrong')
     }
 })
 
@@ -32,19 +32,19 @@ router.get('/get-saved/:id', async (req, res) => {
     const { id } = req.params
     try {
         const user = await AnimeRankingUserInfo.findOne({ id })
-        res.json(user.saved)
+        return res.json(user.saved)
     } catch (err) {
         console.log(err)
-        res.status(400).send('Something went wrong')
+        return res.status(400).send('Something went wrong')
     }
 })
 
 router.get('/get-current-event', async (req, res) => {
     try {
         const event = await AnimeRankingEventInfo.findOne({ status: "current" })
-        res.json(event)
+        return res.json(event)
     } catch (err) {
-        res.status(400).send('Something went wrong')
+        return res.status(400).send('Something went wrong')
     }
 })
 
@@ -55,11 +55,11 @@ router.post('/save-anime', async (req, res) => {
         const savedAnime = user.saved
         savedAnime[animeName] = { name: animeName, image }
         await AnimeRankingUserInfo.updateOne({ id }, { saved: savedAnime })
-        res.json(true)
+        return res.json(true)
     }
     catch (err) {
         console.log(err)
-        res.status(400).send('Something went wrong')
+        return res.status(400).send('Something went wrong')
     }
 })
 
@@ -70,18 +70,18 @@ router.delete('/delete-saved-anime', async (req, res) => {
         const savedAnime = user.saved
         delete savedAnime[animeName]
         await AnimeRankingUserInfo.updateOne({ id }, { saved: savedAnime })
-        res.json(true)
+        return res.json(true)
     }
     catch (err) {
         console.log(err)
-        res.status(400).send('Something went wrong')
+        return res.status(400).send('Something went wrong')
     }
 })
 
 router.post('/create-event', async (req, res) => {
     const generated = await generateNewEvent()
-    if (generated) res.json(true)
-    else res.status(400).send('Something went wrong')
+    if (generated) return res.json(true)
+    else return res.status(400).send('Something went wrong')
 })
 
 router.put('/vote/:id', async (req, res) => {
@@ -94,10 +94,10 @@ router.put('/vote/:id', async (req, res) => {
         const voters = event.voters
         voters[id] = true
         await AnimeRankingEventInfo.updateOne({ status: "current" }, { participants, voters })
-        res.json(true)
+        return res.json(true)
     }
     catch {
-        res.status(400).send('Something went wrong')
+        return res.status(400).send('Something went wrong')
     }
 })
 
