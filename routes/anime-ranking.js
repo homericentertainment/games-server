@@ -4,9 +4,6 @@ const AnimeRankingUserInfo = require('../data/anime-ranking/userInfo')
 const AnimeRankingEventInfo = require('../data/anime-ranking/eventInfo')
 const AnimeRankingAnimeInfo = require('../data/anime-ranking/animeInfo')
 
- generateNewEvent()
-
-
 router.get('/get-user/:id', async (req, res) => {
     const { id } = req.params
     try {
@@ -82,7 +79,9 @@ router.delete('/delete-saved-anime', async (req, res) => {
 })
 
 router.post('/create-event', async (req, res) => {
-
+    const generated = await generateNewEvent()
+    if (generated) res.json(true)
+    else res.status(400).send('Something went wrong')
 })
 
 router.put('/vote/:id', async (req, res) => {
@@ -191,15 +190,16 @@ async function create4Animes() {
         }
     })
     await anime4.save()
+    return true
 }
 
 
 async function generateNewEvent() {
     const questions = [
         //general
-        ['best story ?', 'best animations ?', 'best openings ?', 'best anime overall ?', 'best soundtrack ?', 'best voice actors ?','best side characters ?'],
+        ['best story ?', 'best animations ?', 'best openings ?', 'best anime overall ?', 'best soundtrack ?', 'best voice actors ?', 'best side characters ?'],
         //charactres
-        ['best protagonist ?', 'best antagonist ?' , 'best waifu ?'],
+        ['best protagonist ?', 'best antagonist ?', 'best waifu ?'],
     ]
 
     const randomIndex1 = Math.floor(Math.random() * (questions.length))
