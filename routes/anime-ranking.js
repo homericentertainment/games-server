@@ -105,14 +105,6 @@ router.post('/create-event', async (req, res) => {
 module.exports = router
 
 
-
-
-
-
-
-
-
-
 async function create4Animes() {
     const pazHomo = new AnimeRankingAnimeInfo({
         "name": "Naruto",
@@ -193,7 +185,7 @@ async function create4Animes() {
     return true
 }
 
-// generateNewEvent()
+generateNewEvent()
 
 async function generateNewEvent() {
     const questions = [
@@ -240,8 +232,8 @@ function getParticipants(animes, question, idx, participantsAmount) {
     }
     else if (idx === 1) {
         let key = ''
-        if (question === 'best protagonist ?') key = 'protagonist'
-        else if (question === 'best antagonist ?') key = 'antagonist'
+        if (question === 'best protagonist') key = 'protagonist'
+        else if (question === 'best antagonist') key = 'antagonist'
         else key = 'waifu'
         while (Object.keys(participants).length < participantsAmount) {
             const r = Math.floor(Math.random() * animes.length)
