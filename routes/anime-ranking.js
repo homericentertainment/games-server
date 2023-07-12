@@ -49,13 +49,14 @@ router.get('/get-current-event', async (req, res) => {
 })
 
 router.post('/save-anime', async (req, res) => {
-    const { id, animeName, image } = req.body
+    const { id, animeName, image, spot, question } = req.body
+    console.log(spot, question)
     try {
         const user = await AnimeRankingUserInfo.findOne({ id })
         const savedAnime = user.saved
-        savedAnime[animeName] = { name: animeName, image }
-        await AnimeRankingUserInfo.updateOne({ id }, { saved: savedAnime })
-        return res.json(true)
+        savedAnime[animeName] = { name: animeName, image, spot, question }
+        const newAnime = await AnimeRankingUserInfo.updateOne({ id }, { saved: savedAnime })
+        return res.json(newAnime)
     }
     catch (err) {
         console.log(err)
@@ -192,13 +193,14 @@ async function create4Animes() {
     return true
 }
 
+// generateNewEvent()
 
 async function generateNewEvent() {
     const questions = [
         //general
-        ['best story?', 'best animations ?', 'best openings?', 'best anime overall?', 'best soundtrack?', 'best voice actors?', 'best side characters?'],
+        ['best story', 'best animations', 'best openings', 'best anime overall', 'best soundtrack', 'best voice actors', 'best side characters'],
         //charactres
-        ['best protagonist?', 'best antagonist?', 'best waifu?'],
+        ['best protagonist', 'best antagonist', 'best waifu'],
     ]
 
     const randomIndex1 = Math.floor(Math.random() * (questions.length))
@@ -213,6 +215,7 @@ async function generateNewEvent() {
             "participants": getParticipants(animes, randomQuestion, randomIndex1, 4),
             "status": "current"
         })
+        console.log(newEvent)
         await newEvent.save()
         console.log('generated next event')
     }

@@ -11,7 +11,6 @@ const animeRanking = require('./routes/anime-ranking')
 
 let keys = process.env.NODE_ENV === 'production' ? '' : require('./keys')
 const uri = `mongodb+srv://homericentertainment:${process.env.NODE_ENV === 'production' ? process.env.mongo : keys.mongo}@ganescluster.tyeeph2.mongodb.net/`
-
 mongoose.connect(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true
