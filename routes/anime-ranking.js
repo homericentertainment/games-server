@@ -3,6 +3,75 @@ const router = express.Router()
 const AnimeRankingUserInfo = require('../data/anime-ranking/userInfo')
 const AnimeRankingEventInfo = require('../data/anime-ranking/eventInfo')
 const AnimeRankingAnimeInfo = require('../data/anime-ranking/animeInfo')
+const cron = require('node-cron')
+cron.schedule('59 23 * * *', generateNewEvent)
+// generateNewEvent()
+
+async function generateNewEvent() {
+    const questions = [
+        //general
+        ['best story', 'best animations', 'best openings', 'best anime overall', 'best soundtrack', 'best voice actors', 'best side characters'],
+        //charactres
+        ['best protagonist', 'best antagonist', 'best waifu'],
+    ]
+
+    const randomIndex1 = Math.floor(Math.random() * (questions.length))
+    const randomIndex2 = Math.floor(Math.random() * (questions[randomIndex1].length))
+    const randomQuestion = questions[randomIndex1][randomIndex2]
+
+    try {
+        await AnimeRankingEventInfo.updateMany({ status: 'current' }, { status: 'ended' })
+        const animes = await AnimeRankingAnimeInfo.find({})
+        const newEvent = new AnimeRankingEventInfo({
+            "title": randomQuestion,
+            "participants": getParticipants(animes, randomQuestion, randomIndex1, 4),
+            "status": "current"
+        })
+        await newEvent.save()
+        console.log('generated next event')
+    }
+    catch (err) {
+        console.log(err)
+    }
+}
+
+function getParticipants(animes, question, idx, participantsAmount) {
+    const participants = {}
+    if (idx === 0) while (Object.keys(participants).length < participantsAmount) {
+        const r = Math.floor(Math.random() * animes.length)
+        const anime = animes[r]
+        const participant = {
+            name: anime.name,
+            image: anime.image,
+            from: anime.name,
+            animeImage: anime.image,
+            votes: 0
+        }
+        participants[anime.name] = participant
+    }
+    else if (idx === 1) {
+        let key = ''
+        if (question === 'best protagonist') key = 'protagonist'
+        else if (question === 'best antagonist') key = 'antagonist'
+        else key = 'waifu'
+        while (Object.keys(participants).length < participantsAmount) {
+            const r = Math.floor(Math.random() * animes.length)
+            const anime = animes[r]
+            const participant = {
+                name: anime.characters[key].name,
+                image: anime.characters[key].image,
+                from: anime.name,
+                animeImage: anime.image,
+                votes: 0
+            }
+            participants[anime.characters[key].name] = participant
+        }
+    }
+    return participants
+}
+
+
+
 
 router.get('/get-user/:id', async (req, res) => {
     const { id } = req.params
@@ -105,6 +174,28 @@ router.post('/create-event', async (req, res) => {
 module.exports = router
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 async function create4Animes() {
     const pazHomo = new AnimeRankingAnimeInfo({
         "name": "Naruto",
@@ -183,71 +274,5 @@ async function create4Animes() {
     })
     await anime4.save()
     return true
-}
-
-generateNewEvent()
-
-async function generateNewEvent() {
-    const questions = [
-        //general
-        ['best story', 'best animations', 'best openings', 'best anime overall', 'best soundtrack', 'best voice actors', 'best side characters'],
-        //charactres
-        ['best protagonist', 'best antagonist', 'best waifu'],
-    ]
-
-    const randomIndex1 = Math.floor(Math.random() * (questions.length))
-    const randomIndex2 = Math.floor(Math.random() * (questions[randomIndex1].length))
-    const randomQuestion = questions[randomIndex1][randomIndex2]
-
-    try {
-        await AnimeRankingEventInfo.updateMany({ status: 'current' }, { status: 'ended' })
-        const animes = await AnimeRankingAnimeInfo.find({})
-        const newEvent = new AnimeRankingEventInfo({
-            "title": randomQuestion,
-            "participants": getParticipants(animes, randomQuestion, randomIndex1, 4),
-            "status": "current"
-        })
-        console.log(newEvent)
-        await newEvent.save()
-        console.log('generated next event')
-    }
-    catch (err) {
-        console.log(err)
-    }
-}
-
-function getParticipants(animes, question, idx, participantsAmount) {
-    const participants = {}
-    if (idx === 0) while (Object.keys(participants).length < participantsAmount) {
-        const r = Math.floor(Math.random() * animes.length)
-        const anime = animes[r]
-        const participant = {
-            name: anime.name,
-            image: anime.image,
-            from: anime.name,
-            animeImage: anime.image,
-            votes: 0
-        }
-        participants[anime.name] = participant
-    }
-    else if (idx === 1) {
-        let key = ''
-        if (question === 'best protagonist') key = 'protagonist'
-        else if (question === 'best antagonist') key = 'antagonist'
-        else key = 'waifu'
-        while (Object.keys(participants).length < participantsAmount) {
-            const r = Math.floor(Math.random() * animes.length)
-            const anime = animes[r]
-            const participant = {
-                name: anime.characters[key].name,
-                image: anime.characters[key].image,
-                from: anime.name,
-                animeImage: anime.image,
-                votes: 0
-            }
-            participants[anime.characters[key].name] = participant
-        }
-    }
-    return participants
 }
 
