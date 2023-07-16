@@ -19,7 +19,7 @@ mongoose.connect(uri, {
 }).catch((err) => console.log("DATABASE CONNECTION FAILED", err))
 
 app.set('view engine', 'ejs')
-if (process.env.NODE_ENV !== 'production') app.use(morgan('dev'))
+app.use(morgan('dev'))
 
 const corsOptions = {
   origin: process.env.NODE_ENV === 'production' ?
