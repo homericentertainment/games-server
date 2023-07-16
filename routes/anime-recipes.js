@@ -11,6 +11,16 @@ router.get('/get-recipes', async (req, res) => {
     }
 })
 
+router.get('/get-recipes-from/:animeName', async (req, res) => {
+    try {
+        const { animeName } = req.params
+        const recipes = await RecipeInfo.find({animeName:anime})
+        res.json(recipes)
+    } catch (err) {
+        res.status(400).send('Something went wrong')
+    }
+})
+
 
 // paz2()
 

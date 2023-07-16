@@ -24,11 +24,11 @@ async function generateNewEvent() {
         const animes = await AnimeRankingAnimeInfo.find({})
         const newEvent = new AnimeRankingEventInfo({
             "title": randomQuestion,
-            "participants": getParticipants(animes, randomQuestion, randomIndex1, 4),
+            "participants": getParticipants(animes, randomQuestion, randomIndex1, 16),
             "status": "current"
         })
         await newEvent.save()
-        console.log('generated next event')
+        console.log('generated next event:', randomQuestion)
     }
     catch (err) {
         console.log(err)
@@ -69,9 +69,6 @@ function getParticipants(animes, question, idx, participantsAmount) {
     }
     return participants
 }
-
-
-
 
 router.get('/get-user/:id', async (req, res) => {
     const { id } = req.params
@@ -172,95 +169,3 @@ router.post('/create-event', async (req, res) => {
 })
 
 module.exports = router
-
-
-
-
-
-
-
-
-
-
-
-
-async function create4Animes() {
-    const pazHomo = new AnimeRankingAnimeInfo({
-        "name": "Naruto",
-        "image": "https://cdn.myanimelist.net/images/anime/13/17405.jpg",
-        "characters": {
-            "protagonist": {
-                name: "Naruto",
-                image: "https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg"
-            },
-            "antagonist": {
-                name: "Madara",
-                image: "https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg"
-            },
-            "waifu": {
-                name: "Sakura",
-                image: "https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg"
-            }
-        }
-    })
-    await pazHomo.save()
-    const anime2 = new AnimeRankingAnimeInfo({
-        "name": "One Piece",
-        "image": "https://cdn.myanimelist.net/images/anime/6/73245.jpg",
-        "characters": {
-            "protagonist": {
-                name: "Luffy",
-                image: "https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg"
-            },
-            "antagonist": {
-                name: "Blackbeard",
-                image: "https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg"
-            },
-            "waifu": {
-                name: "Nami",
-                image: "https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg"
-            }
-        }
-    })
-    await anime2.save()
-    const anime3 = new AnimeRankingAnimeInfo({
-        "name": "Bleach",
-        "image": "https://cdn.myanimelist.net/images/anime/3/40451.jpg",
-        "characters": {
-            "protagonist": {
-                name: "Ichigo",
-                image: "https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg"
-            },
-            "antagonist": {
-                name: "Aizen",
-                image: "https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg"
-            },
-            "waifu": {
-                name: "Orihime",
-                image: "https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg"
-            }
-        }
-    })
-    await anime3.save()
-    const anime4 = new AnimeRankingAnimeInfo({
-        "name": "Dragon Ball",
-        "image": "https://cdn.myanimelist.net/images/anime/6/53491.jpg",
-        "characters": {
-            "protagonist": {
-                name: "Goku",
-                image: "https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg"
-            },
-            "antagonist": {
-                name: "Frieza",
-                image: "https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg"
-            },
-            "waifu": {
-                name: "Bulma",
-                image: "https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg"
-            }
-        }
-    })
-    await anime4.save()
-    return true
-}
-
