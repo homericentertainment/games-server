@@ -21,9 +21,7 @@ router.get('/get-recipes-from/:animeName', async (req, res) => {
     }
 })
 
-
 // paz2()
-
 
 // async function paz(){
 //     try {

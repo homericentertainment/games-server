@@ -5,19 +5,19 @@ async function add() {
     const animes = [
         {
             "name": "The Irregular at Magic High School",
-            "image": "https://e1.pxfuel.com/desktop-wallpaper/721/122/desktop-wallpaper-mahouka-koukou-no-rettousei.jpg",
+            "image": "https://drive.google.com/file/d/1sHI0HrI0YXUxKlVaT61zTvRjvujkDpyx/view?usp=drive_link",
             "characters": {
                 "protagonist": {
                     name: "Tatsuya Shiba",
-                    image: "https://static.wikia.nocookie.net/p__/images/3/33/Mahouka27634.jpg/revision/latest?cb=20150323035039&path-prefix=protagonist"
+                    image: "https://drive.google.com/file/d/1isXDLlifRfoDnoM9OvVhaIgMFOzNwjON/view?usp=drive_link"
                 },
                 "antagonist": {
                     name: " Katsuto Jyumonji",
-                    image: "https://external-preview.redd.it/bvCqB1Lbd93zIMTv1xXVrOLGHEiVgN1pyEarNP_biic.png?auto=webp&s=3f25229702f7eae3cfef2d5246b7178983937ce8"
+                    image: "https://drive.google.com/file/d/1tNs6xa3Wb3oJ5fGgJCU4pDTlcfs4-RLV/view?usp=drive_link"
                 },
                 "waifu": {
                     name: "Miyuki Shiba",
-                    image: "https://w0.peakpx.com/wallpaper/350/237/HD-wallpaper-anime-anime-girls-shiba-miyuki-long-hair-blue-eyes-mahouka-koukou-no-rettousei-looking-at-viewer-standing-blue-hair-tie-women-pixiv-thumbnail.jpg"
+                    image: "https://drive.google.com/file/d/1AcXe4_LK9-Tuf1k-rYdVFMpAARG19iKr/view?usp=drive_link"
                 }
             }
         },
@@ -27,20 +27,20 @@ async function add() {
             "characters": {
                 "protagonist": {
                     name: " Samurai X",
-                    image: "https://images.saymedia-content.com/.image/t_share/MTczODYwNTM2NTI0Njc4MjA4/rurounikenshinthemes.jpg"
+                    image: "https://drive.google.com/file/d/1VB2m8wmNmsz01Hios6ickUF1jhXgzZls/view?usp=drive_link"
                 },
                 "antagonist": {
                     name: "Makoto Shishio",
-                    image: "https://upload.wikimedia.org/wikipedia/en/b/b3/ShishioMakoto.png"
+                    image: "https://drive.google.com/file/d/1c01ei6q1_vaADvkw44H5eebPFKpxz3rJ/view?usp=drive_link"
                 },
                 "waifu": {
                     name: "Kaoru Kamiya",
-                    image: "https://static.wikia.nocookie.net/doblaje/images/f/ff/Kaoru_Kamiya.png/revision/latest?cb=20190816010014&path-prefix=es"
+                    image: "https://drive.google.com/file/d/16fVofinmw2addnDZeAtcT-PF_icJDXp2/view?usp=drive_link"
                 }
             }
         },
         {
-            "name": "Ghost in the Shell: Stand Alone Complex",
+            "name": "Ghost in the Shell",
             "image": "https://drive.google.com/file/d/19b1FJ7dEzBndHBTy7NkxXo6vkvlSPJ4J/view?usp=sharing",
             "characters": {
                 "protagonist": {
@@ -49,7 +49,7 @@ async function add() {
                 },
                 "antagonist": {
                     name: "Hideo Kuzeo",
-                    image: "https://static.wikia.nocookie.net/ghostintheshell/images/d/de/VisualBook.jpg/revision/latest?cb=20200208050819&path-prefix=en"
+                    image: "https://drive.google.com/file/d/1Vhh-iNEJqzOKXqvd4xWpw17cKtn3t70_/view?usp=drive_link"
                 },
                 "waifu": {
                     name: "Major Motoko Kusanagi",
@@ -59,7 +59,7 @@ async function add() {
         },
         {
             "name": "Mobile Suit Gundam",
-            "image": "https://static.wikia.nocookie.net/gundam/images/f/f8/Mobile_Suit_Gundam_Poster.jpg/revision/latest?cb=20190330030719",
+            "image": "https://drive.google.com/file/d/1bUmBqGpPbscQJFkRGLuA_FLfBqWOhiZz/view?usp=drive_link",
             "characters": {
                 "protagonist": {
                     name: " Amuro Ray",
@@ -67,11 +67,11 @@ async function add() {
                 },
                 "antagonist": {
                     name: " Char Aznable",
-                    image: "https://static.wikia.nocookie.net/gundam/images/8/86/Char_Aznable_One_Year_War.jpg/revision/latest/scale-to-width-down/1200?cb=20100401174631"
+                    image: "https://drive.google.com/file/d/1R2fIdQCuVz2I7LZ9LP6tVGgNEgZq1w6A/view?usp=drive_link"
                 },
                 "waifu": {
                     name: "Sayla Mass",
-                    image: "https://static.zerochan.net/Sayla.Mass.full.3261598.png"
+                    image: "https://drive.google.com/file/d/1wtf385U7DjOZvh-ZdP0BX0uDgfjFDZiS/view?usp=sharing"
                 }
             }
         },
@@ -89,7 +89,7 @@ async function add() {
                 },
                 "waifu": {
                     name: "Shura Kirigakure",
-                    image: "https://markerix.weebly.com/uploads/5/4/6/7/54673641/20161229161258_orig.png"
+                    image: "https://drive.google.com/file/d/1N6PqgTBfv5W-GA5odlaacKvo6awk97in/view?usp=sharing"
                 }
             }
         },
@@ -117,7 +117,7 @@ async function add() {
             "characters": {
                 "protagonist": {
                     name: "Rokurou Okajima",
-                    image: "https://cdn-us.anidb.net/images/main/54579.jpg"
+                    image: "https://drive.google.com/file/d/1oVefBfVLncTKQ_8-7JEOJ4PJI27k73_F/view?usp=sharing"
                 },
                 "antagonist": {
                     name: "Balalaika",
@@ -125,7 +125,7 @@ async function add() {
                 },
                 "waifu": {
                     name: "Ravy",
-                    image: "https://w0.peakpx.com/wallpaper/796/24/HD-wallpaper-revy-black-lagoon-anime-black-lagoon.jpg"
+                    image: "https://drive.google.com/file/d/1rD8QZ8LoX0st8QYt-UP7qS-ng--em2OG/view?usp=sharing"
                 }
             }
         },
@@ -135,15 +135,15 @@ async function add() {
             "characters": {
                 "protagonist": {
                     name: "Issei Hyoudou",
-                    image: "https://highschooldxd.fandom.com/pl/wiki/Issei_Hyoudou"
+                    image: "https://drive.google.com/file/d/1DGdRS1P5nHa04KtBIR487pcXYgHGhxj2/view?usp=sharing"
                 },
                 "antagonist": {
                     name: " fallen angels",
-                    image: "https://img.wattpad.com/0425b875bf85191018d0c49c7af59937c620b7ff/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f6934322d6d626c43502d525056413d3d2d3738303432343733312e313563326332373331643131633430383539383032313832373733392e6a7067?s=fit&w=720&h=720"
+                    image: "https://drive.google.com/file/d/1ZsnkaOavqNBxLgfyBRYa4P52gk0u89-3/view?usp=sharing"
                 },
                 "waifu": {
                     name: "Rias Gremory",
-                    image: "https://static.wikia.nocookie.net/highschooldxd/images/1/14/Rias_uniform.jpg/revision/latest?cb=20130413060054"
+                    image: "https://drive.google.com/file/d/1VYl57rgAv1PQZiIn0KPn0GKo9tPtSpVM/view?usp=sharing"
                 }
             }
         },
@@ -153,7 +153,7 @@ async function add() {
             "characters": {
                 "protagonist": {
                     name: "Mikado Ryuugamine",
-                    image: "https://kawaii-mobile.com/2012/05/durarara/durarara-mikado-ryugamine-360x640/"
+                    image: "https://drive.google.com/file/d/17OPrQkRYsuUAQnXU3PUwt6QtporYWRNv/view?usp=sharing"
                 },
                 "antagonist": {
                     name: " Izaya Orihara",
@@ -175,11 +175,11 @@ async function add() {
                 },
                 "antagonist": {
                     name: " Yuno Gasai ",
-                    image: "https://w0.peakpx.com/wallpaper/380/946/HD-wallpaper-yuno-gasai-anime-anime-edit-anime-girl-anime-future-diary-gasai-yuno-mirai-nikki-thumbnail.jpg"
+                    image: "https://drive.google.com/file/d/1unVCVhICQrm70No6hOc7IwjMlJnjhmDW/view?usp=drive_link"
                 },
                 "waifu": {
                     name: " Yuno Gasai",
-                    image: "https://w0.peakpx.com/wallpaper/708/337/HD-wallpaper-mirai-nikki-anime-art-asasins-girl-nikki-pink-random-waifu-thumbnail.jpg"
+                    image: "https://drive.google.com/file/d/147M6coc3J4JVGpkHOIpR2kl9YOH-EQP9/view?usp=drive_link"
                 }
             }
         },
@@ -189,7 +189,7 @@ async function add() {
             "characters": {
                 "protagonist": {
                     name: "Tatsumi",
-                    image: "https://w0.peakpx.com/wallpaper/786/144/HD-wallpaper-akame-ga-kill-anime-designs-drawings-entertainment-japan-japon-manga-mine-tatsumi-thumbnail.jpg"
+                    image: "https://drive.google.com/file/d/1nM0oPplEuoP2coo66ACYPiqmiIILYDJn/view?usp=drive_link"
                 },
                 "antagonist": {
                     name: " Esdeath",
@@ -197,7 +197,7 @@ async function add() {
                 },
                 "waifu": {
                     name: "Sheele",
-                    image: "https://w0.peakpx.com/wallpaper/787/829/HD-wallpaper-soul-eater-maka-thumbnail.jpg"
+                    image: "https://drive.google.com/file/d/1w75D_0JPMzcwCeE6udbIWV4s1FcKCbFL/view?usp=sharing"
                 }
             }
         },
@@ -207,21 +207,21 @@ async function add() {
             "characters": {
                 "protagonist": {
                     name: "Decim",
-                    image: "https://i.pinimg.com/236x/61/5e/b3/615eb34be4c92c448e7bed1354104c1f--death-parade-anime-guys.jpg"
+                    image: "https://drive.google.com/file/d/1a0oZUFPIXbOnepYSdvwA0Yn39PK3cjIh/view?usp=drive_link"
                 },
                 "antagonist": {
                     name: " Nona",
-                    image: "https://i.pinimg.com/474x/53/20/c7/5320c7409fdcc47b9341a35a91f44ae5.jpg"
+                    image: "https://drive.google.com/file/d/1OJeL_9uxFgxcbcfEx3OTaluz6xoGQrj3/view?usp=sharing"
                 },
                 "waifu": {
                     name: "Chiyuki",
-                    image: "https://death-parade.fandom.com/wiki/Chiyuki/Image_Gallery"
+                    image: "https://drive.google.com/file/d/1Kne-A7ReJVBeVTgD7TpfepcpO1_9E3H_/view?usp=sharing"
                 }
             }
         },
         {
             "name": "Soul Eater",
-            "image": "https://w0.peakpx.com/wallpaper/787/829/HD-wallpaper-soul-eater-maka-thumbnail.jpg",
+            "image": "https://drive.google.com/file/d/1YqdhPVyLdkrd658X5ONj7X10jO4JWdkV/view?usp=sharing",
             "characters": {
                 "protagonist": {
                     name: " Maka Albarn",
@@ -239,51 +239,51 @@ async function add() {
         },
         {
             "name": "The Promised Neverland",
-            "image": "https://w0.peakpx.com/wallpaper/280/964/HD-wallpaper-emma-norman-e-ray-the-promised-neverland-tpn-thumbnail.jpg ",
+            "image": "https://drive.google.com/file/d/1W22kNZsoVidChvn70XF3YVEc-4Tm7iDP/view?usp=drive_link",
             "characters": {
                 "protagonist": {
                     name: " Emma   ",
-                    image: "https://w0.peakpx.com/wallpaper/61/17/HD-wallpaper-the-promised-neverland-emma-the-promised-neverland-yakusoku-no-neverland-thumbnail.jpg"
+                    image: "https://drive.google.com/file/d/17OMhY4kR3rKKmvGVh1_bLdCESkGCJJx-/view?usp=drive_link"
                 },
                 "antagonist": {
                     name: "Isabella ",
-                    image: "https://cdna.artstation.com/p/assets/images/images/030/102/982/large/jayson-reyes-isabella-final.jpg?1599610599"
+                    image: "https://drive.google.com/file/d/14n89uKDUSPXq8m3fqk3CszYDzM5ghtHF/view?usp=drive_link"
                 },
                 "waifu": {
                     name: " Norman ",
-                    image: "https://w0.peakpx.com/wallpaper/963/216/HD-wallpaper-norman-the-promised-neverland-yakusoku-no-neverland-thumbnail.jpg"
+                    image: "https://drive.google.com/file/d/1-SmzPfa-3DlKTsdeuIWDs8CZBIjBIy6M/view?usp=drive_link"
                 }
             }
         },
         {
             "name": "Assassination Classroom",
-            "image": "https://w0.peakpx.com/wallpaper/569/461/HD-wallpaper-a-s-class-assassination-classroom-thumbnail.jpg",
+            "image": "https://drive.google.com/file/d/1ubGw3vIq5B8kYPiQcJ_8ygmnIUVTb_Gk/view?usp=sharing",
             "characters": {
                 "protagonist": {
                     name: " Nagisa Shiota ",
-                    image: "https://w0.peakpx.com/wallpaper/678/868/HD-wallpaper-class-assassination-nagisa-shiota-anime-weapons-slayer-boy-thumbnail.jpg"
+                    image: "https://drive.google.com/file/d/1yf96ea2JoOj1ov8mstBsWzkPGCi6hAHV/view?usp=drive_link"
                 },
                 "antagonist": {
                     name: "Koro-sensei ",
-                    image: "https://w0.peakpx.com/wallpaper/505/769/HD-wallpaper-koro-sensei-anime-thumbnail.jpg"
+                    image: "https://drive.google.com/file/d/1auug5fi0Hi3t8QYJTj20QI5Uj22S4l3Z/view?usp=sharing"
                 },
                 "waifu": {
                     name: "Kaede Kayano",
-                    image: "https://static.wikia.nocookie.net/assassinationclassroom/images/5/5d/Kayano_Kaede_Transparent.png/revision/latest?cb=20161202043645 "
+                    image: "https://drive.google.com/file/d/1NRkUTF5WWRZkNChLxInIUfJ-HtoAbtHf/view?usp=sharing"
                 }
             }
         },
         {
             "name": "Haikyu!! ",
-            "image": "https://w0.peakpx.com/wallpaper/802/743/HD-wallpaper-karasuno-fight-anime-daichi-haikyu-haikyuu-haikyuu-to-the-top-hinata-karasuno-team-volleyball-thumbnail.jpg",
+            "image": "https://drive.google.com/file/d/1YTXVGvW579eP8vXtF-s9ZlYQtXyBgHJu/view?usp=sharing",
             "characters": {
                 "protagonist": {
                     name: "  Shoyo Hinata ",
-                    image: "https://w0.peakpx.com/wallpaper/771/166/HD-wallpaper-shoyo-hinata-haikyuu-hinata-thumbnail.jpg"
+                    image: "https://drive.google.com/file/d/1Dc2rZDpta4TyFHd9CQf18WxKylwUuTjo/view?usp=sharing"
                 },
                 "antagonist": {
                     name: "Toru Oikawa ",
-                    image: "https://w0.peakpx.com/wallpaper/677/143/HD-wallpaper-oikawa-haikyu-haikyuu-handsome-hot-volleyball-thumbnail.jpg"
+                    image: "https://drive.google.com/file/d/1_p5qEPmf1Ftp3UZb6--6_5sYhPVWTxa5/view?usp=sharing"
                 },
                 "waifu": {
                     name: " Yachi Hitoka",
@@ -293,47 +293,47 @@ async function add() {
         },
         {
             "name": "Steins;Gate ",
-            "image": "https://w0.peakpx.com/wallpaper/253/861/HD-wallpaper-okabe-steins-gate-rintaro-thumbnail.jpg ",
+            "image": "https://drive.google.com/file/d/1C2GyCFkF0v7tJR2ECmALmansp5hE4ADV/view?usp=drive_link ",
             "characters": {
                 "protagonist": {
                     name: "  Rintarou Okabe ",
-                    image: "https://w0.peakpx.com/wallpaper/97/741/HD-wallpaper-okabe-rintarou-hououin-kyouma-steins-gate-thumbnail.jpg"
+                    image: "https://drive.google.com/file/d/1EhpirZn4n2RAgY5xNEn75g9acUDe9p_g/view?usp=drive_link"
                 },
                 "antagonist": {
                     name: "SERN ",
-                    image: "https://m.media-amazon.com/images/I/51XmX8EQgjL._AC_UF1000,1000_QL80_.jpg"
+                    image: "https://drive.google.com/file/d/1FbggVTD0zVvSxN83_XSpMrJ2D7zFjjrM/view?usp=drive_link"
                 },
                 "waifu": {
-                    name: "Asuna Yuuki ",
-                    image: "https://w0.peakpx.com/wallpaper/213/796/HD-wallpaper-portrait-display-anime-steins-gate-makise-kurisu-anime-girls-thumbnail.jpg "
+                    name: "Kurisu Makise ",
+                    image: "https://drive.google.com/file/d/1ifv0apjh1bxuFNgTjQhTUs8PJswPC_7E/view?usp=sharing "
                 }
             }
         },
         {
             "name": "My Hero Academia ",
-            "image": "https://w0.peakpx.com/wallpaper/190/542/HD-wallpaper-my-hero-academia-midoriya-my-hero-academia-todoroki-thumbnail.jpg ",
+            "image": "https://drive.google.com/file/d/18PP2G32AEnlLPmOUUbLrf5lwVSjDWkG2/view?usp=sharing",
             "characters": {
                 "protagonist": {
                     name: " Izuku Midoriya  ",
-                    image: "https://w0.peakpx.com/wallpaper/690/260/HD-wallpaper-deku-izuku-midoriya-ofa-oneforall-super-thumbnail.jpg"
+                    image: "https://drive.google.com/file/d/1FAUBGUqnaVBTxkCjQorWFy1rmK0-aG6P/view?usp=sharing"
                 },
                 "antagonist": {
                     name: " Tomura Shigaraki ",
-                    image: " https://w0.peakpx.com/wallpaper/566/632/HD-wallpaper-tomura-shigaraki-thumbnail.jpg "
+                    image: " https://drive.google.com/file/d/1kpS4wnvcTXrHFRfaJZeo1VNC2Mztc_za/view?usp=sharing "
                 },
                 "waifu": {
                     name: "Ochaco Uraraka ",
-                    image: "https://w0.peakpx.com/wallpaper/649/863/HD-wallpaper-my-hero-academia-anime-ochaco-uraraka-thumbnail.jpg"
+                    image: "https://drive.google.com/file/d/1RsJImtLTJWsp4gev_VZUWJu2J_oDsAEv/view?usp=sharing"
                 }
             }
         },
         {
             "name": "Sword Art Online ",
-            "image": "https://w0.peakpx.com/wallpaper/814/709/HD-wallpaper-sword-art-online-art-asuna-kirito-online-sword-thumbnail.jpg ",
+            "image": "https://drive.google.com/file/d/1E4lMsaAPp8z7phD_TQz4eSoilpI36kSs/view?usp=drive_link",
             "characters": {
                 "protagonist": {
                     name: "  Kirito   ",
-                    image: "https://w0.peakpx.com/wallpaper/225/192/HD-wallpaper-kirito-sao-thumbnail.jpg"
+                    image: "https://drive.google.com/file/d/1lKH69G1GU52J7T_ChG3PpE6wA4Zk8cP0/view?usp=drive_link"
                 },
                 "antagonist": {
                     name: "Sugou Nobuyuki ",
@@ -341,7 +341,7 @@ async function add() {
                 },
                 "waifu": {
                     name: "Asuna Yuuki ",
-                    image: "https://w0.peakpx.com/wallpaper/969/891/HD-wallpaper-anime-sword-art-online-yuuki-asuna-armor-sword-portrait-display-anime-girls-thumbnail.jpg"
+                    image: "https://drive.google.com/file/d/1e5ZGnxzZl-EvuChb1nZLnbPzHzTA_0Ni/view?usp=drive_link"
                 }
             }
         },
@@ -351,21 +351,21 @@ async function add() {
             "characters": {
                 "protagonist": {
                     name: " Spike Spiegel ",
-                    image: "https://wallpapers-clan.com/wp-content/uploads/2023/06/cowboy-bebop-spike-spiegel-dark-wallpaper.jpg"
+                    image: "https://drive.google.com/file/d/1pdQ2l1-u1dTdIDT38peOEJ4OvqJd6s2r/view?usp=drive_link"
                 },
                 "antagonist": {
                     name: " Vicious - Vicious ",
-                    image: " https://preview.redd.it/how-do-yall-feel-about-vicious-v0-ms9sksju3q5a1.jpg?auto=webp&s=669ffbe1747437a321977d995823ede7e2dba827 "
+                    image: " https://drive.google.com/file/d/196ozlapmCYHV9xPMkgy5uAz-MLnRst7I/view?usp=drive_link "
                 },
                 "waifu": {
                     name: " Faye Valentine ",
-                    image: "https://64.media.tumblr.com/9a1c9592e46b3f78541598107937ec1c/19dbe60bb33e70ac-91/s640x960/47eff8cad9838c2e409baedd856505f23011ce4f.png"
+                    image: "https://drive.google.com/file/d/1BPTgoGFceCrB4vJ9F--NyBq2PQv2TwDy/view?usp=drive_link"
                 }
             }
         },
         {
             "name": "Demon Slayer ",
-            "image": "https://w0.peakpx.com/wallpaper/943/193/HD-wallpaper-demon-slayer-anime-demon-slayer-thumbnail.jpg",
+            "image": "https://drive.google.com/file/d/17VLJosV2t_3nWXFT6aiAYN5dAAuK4a4o/view?usp=drive_link",
             "characters": {
                 "protagonist": {
                     name: " Tanjiro Kamado",
@@ -383,235 +383,235 @@ async function add() {
         },
         {
             "name": "One Piece",
-            "image": "https://w0.peakpx.com/wallpaper/599/734/HD-wallpaper-one-piece-one-piece-anime-thumbnail.jpg",
+            "image": "https://drive.google.com/file/d/1oek8pgJtxsVA9ZrVWyaCULXWToRpUMCl/view?usp=drive_link",
             "characters": {
                 "protagonist": {
                     name: "Luffy",
-                    image: "https://w0.peakpx.com/wallpaper/425/322/HD-wallpaper-luffy-one-piece-thumbnail.jpg"
+                    image: "https://drive.google.com/file/d/1hAMREDmsRIsFFr1YpAUd4e7gTjHIfMl_/view?usp=drive_link"
                 },
                 "antagonist": {
                     name: "Donquixote Doflamingo",
-                    image: "https://i.pinimg.com/564x/db/51/f8/db51f8b86389d202f665c12831944e9e.jpg"
+                    image: "https://drive.google.com/file/d/1yu0O0R6Svy_XLYP2WbkIOkF181DLbdmp/view?usp=drive_link"
                 },
                 "waifu": {
                     name: "Nami",
-                    image: "https://w0.peakpx.com/wallpaper/68/460/HD-wallpaper-nami-anime-one-piece-manga-thumbnail.jpg"
+                    image: "https://drive.google.com/file/d/1EuO1stiJ45F1KoohH-lZ9Dc1pWCtDEuJ/view?usp=drive_link"
                 }
             }
         },
         {
             "name": "One Punch Man",
-            "image": "https://w0.peakpx.com/wallpaper/415/984/HD-wallpaper-one-punch-man-saitama-thumbnail.jpg",
+            "image": "https://drive.google.com/file/d/1xHCEHjEdRwo7no5XN7of8WYCIuMiFrSC/view?usp=drive_link",
             "characters": {
                 "protagonist": {
                     name: " Saitama",
-                    image: "https://w0.peakpx.com/wallpaper/270/95/HD-wallpaper-one-punch-man-genos-genos-one-punch-man-saitama-saitama-one-punch-man-thumbnail.jpg"
+                    image: "https://drive.google.com/file/d/1u5wrYFyoxf00sgPDsFv97KD35l5Hhl2X/view?usp=drive_link"
                 },
                 "antagonist": {
                     name: "Garou",
-                    image: "https://w0.peakpx.com/wallpaper/700/589/HD-wallpaper-garou-opm-thumbnail.jpg"
+                    image: "https://drive.google.com/file/d/1DUIOaT434KoxphEux2DevO-LtgMN9NAN/view?usp=drive_link"
                 },
                 "waifu": {
                     name: "Tatsumaki",
-                    image: "https://w0.peakpx.com/wallpaper/990/843/HD-wallpaper-tatsumaki-galaxy-fubuki-one-punch-man-purple-tornado-thumbnail.jpg"
+                    image: "https://drive.google.com/file/d/1MxrR_ENVI76PnEUOSDxNQuGNpysMixLQ/view?usp=drive_link"
                 }
             }
         },
         {
             "name": "devilman crybaby",
-            "image": " https://w0.peakpx.com/wallpaper/728/978/HD-wallpaper-devilman-anime-crybaby-thumbnail.jpg ",
+            "image": " https://drive.google.com/file/d/11zj6POvLVY_PawO2gVajVFXlpiRiV1K7/view?usp=drive_link ",
             "characters": {
                 "protagonist": {
                     name: " akira fudo ",
-                    image: "https://i.pinimg.com/564x/ba/0a/00/ba0a00a17a7407380b3971535c504b6a.jpg"
+                    image: "https://drive.google.com/file/d/10-RCWE_j_OgxzxtyzD20fm59znzz609z/view?usp=drive_link"
                 },
                 "antagonist": {
                     name: " Ryo Asuka ",
-                    image: " https://static.wikia.nocookie.net/cyborg009/images/9/98/Ryo_%28009_vs_Devilman%29..jpg/revision/latest?cb=20150718192335 "
+                    image: " https://drive.google.com/file/d/1OZJFa9HY4fidvvfHrXO2j1bggLijuW18/view?usp=drive_link "
                 },
                 "waifu": {
                     name: " Miki Makimura ",
-                    image: " https://animebathscenewiki.com/images/thumb/9/94/Devilman_Crybaby_3_27.png/382px-Devilman_Crybaby_3_27.png "
+                    image: " https://drive.google.com/file/d/1dbRgnI0RIHkwqyZlu8lIUFXlGgWkAYDc/view?usp=drive_link"
                 }
             }
         },
         {
             "name": "Attack On Titan",
-            "image": "https://w0.peakpx.com/wallpaper/67/350/HD-wallpaper-eren-jaeger-attack-on-titan-shingeki-no-kyojin-thumbnail.jpg",
+            "image": "https://drive.google.com/file/d/1HfFjoYUjcr5y8oARnUpuVuRGEkxcApcp/view?usp=drive_link",
             "characters": {
                 "protagonist": {
                     name: " Eren Yeager",
-                    image: "https://w0.peakpx.com/wallpaper/294/226/HD-wallpaper-eren-jaeger-aot-attack-on-titan-eren-yeager-fire-season-4-shingeki-on-kyojin-thumbnail.jpg"
+                    image: "https://drive.google.com/file/d/1PPEGDIPO6jMcaEmNWfYc8viEESy_jbhn/view?usp=drive_link"
                 },
                 "antagonist": {
                     name: "Annie Leonhart",
-                    image: "https://e0.pxfuel.com/wallpapers/460/990/desktop-wallpaper-leonhart-and-titan-annie-leonhart-and-titan.jpg"
+                    image: "https://drive.google.com/file/d/1CeqaT-HAPsQv0P53NpffhtymOcBw1Bn6/view?usp=drive_link"
                 },
                 "waifu": {
                     name: "Mikasa Ackerman",
-                    image: "https://w0.peakpx.com/wallpaper/870/330/HD-wallpaper-mikasa-ackerman-attack-on-titan-thumbnail.jpg"
+                    image: "https://drive.google.com/file/d/1PPEGDIPO6jMcaEmNWfYc8viEESy_jbhn/view?usp=drive_link"
                 }
             }
         },
         {
             "name": "Naruto",
-            "image": " https://w0.peakpx.com/wallpaper/675/394/HD-wallpaper-naruto-and-saske-naruto-shippuden-naruto-uzumakie-saske-uchiha-sasuke-sasuke-uchiha-thumbnail.jpg",
+            "image": " https://drive.google.com/file/d/1CSQEC_JY4tCwEX0dl3KTJbX_U4UJoYrg/view?usp=drive_link",
             "characters": {
                 "protagonist": {
                     name: " Naruto Uzumaki",
-                    image: " https://w0.peakpx.com/wallpaper/10/338/HD-wallpaper-naruto-uzumaki-naruto-anime-thumbnail.jpg"
+                    image: " https://drive.google.com/file/d/1J883UEKmbaaFQM5G_bWQDGCXiJMf-G1W/view?usp=drive_link"
                 },
                 "antagonist": {
                     name: " orochimaru ",
-                    image: "https://w0.peakpx.com/wallpaper/605/78/HD-wallpaper-orochimaru-kakashi-manga-saske-sasuke-serpientes-snakes-thumbnail.jpg"
+                    image: "https://drive.google.com/file/d/1lzS3AdKOjsEiDAKoxAfNVd_ZuP6ghScl/view?usp=drive_link"
                 },
                 "waifu": {
                     name: " Hinata Hyuga ",
-                    image: " https://static.wikia.nocookie.net/p__/images/f/fc/HinasNaruto-Storm-4-Hinata-Art.jpg/revision/latest?cb=20150215011132&path-prefix=protagonist "
+                    image: " https://drive.google.com/file/d/12DjOQCQVLS11bGcMWDjJVojMl0AYySjz/view?usp=drive_link "
                 }
             }
         },
         {
             "name": "Pokémon",
-            "image": " https://static.posters.cz/image/1300/plakatok/pokemon-pikachu-neon-i71936.jpg",
+            "image": " https://drive.google.com/file/d/1rwpdR_GJjBoTyjB1aFjn7D641AtX9acv/view?usp=drive_link",
             "characters": {
                 "protagonist": {
                     name: " Ash Ketchum",
-                    image: "https://w0.peakpx.com/wallpaper/10/936/HD-wallpaper-ash-ketchum-hero-pokemon-super-thumbnail.jpg"
+                    image: "https://drive.google.com/file/d/1GvgA0-C-tiH3J90YlBydDUD50-w9rJKq/view?usp=drive_link"
                 },
                 "antagonist": {
                     name: " Team Rocket",
-                    image: "https://i.pinimg.com/originals/76/0d/34/760d34ae38d89116337fb22cad9b0da3.png"
+                    image: "https://drive.google.com/file/d/1v3i1pWBnA8hYAQ0b3goEIJRgwdu_Kh2E/view?usp=drive_link"
                 },
                 "waifu": {
                     name: " Misty",
-                    image: "https://static.wikia.nocookie.net/sonicpokemon/images/f/f3/Misty_kasumi_by_songokukai.png/revision/latest/scale-to-width-down/1200?cb=20130303233843"
+                    image: "https://drive.google.com/file/d/1v3i1pWBnA8hYAQ0b3goEIJRgwdu_Kh2E/view?usp=drive_link"
                 }
             }
         },
         {
-            "name": "Food Wars!: Shokugeki no Soma",
-            "image": " https://w0.peakpx.com/wallpaper/755/127/HD-wallpaper-shokugeki-no-soma-food-wars-thumbnail.jpg",
+            "name": "Food Wars!",
+            "image": " https://drive.google.com/file/d/1KoryaxdQ2guwkE8lDr7xTSNw399Q8-M0/view?usp=drive_link",
             "characters": {
                 "protagonist": {
                     name: " Yukihira Soma",
-                    image: "https://w0.peakpx.com/wallpaper/1019/187/HD-wallpaper-shokugeki-no-souma-soma-yukihira-yukihira-soma-thumbnail.jpg"
+                    image: "https://drive.google.com/file/d/1TvlR8bFVvhIOHZ-TZogsj2iCPz4kylq7/view?usp=drive_link"
                 },
                 "antagonist": {
                     name: " Azami Nakiri",
-                    image: " https://i.pinimg.com/originals/9e/ee/49/9eee4978a1be9191a7f182024d890997.jpg"
+                    image: " https://drive.google.com/file/d/1ZFTjEwD07y_RKglFh4YuppLj2ClzFZLo/view?usp=drive_link"
                 },
                 "waifu": {
                     name: " Erina Nakiri",
-                    image: " https://w0.peakpx.com/wallpaper/209/843/HD-wallpaper-nakiri-erina-shokugeki-no-souma-anime-anime-girls-blonde-long-hair-looking-at-viewer-schoolgirl-school-uniform-miniskirt-plaid-skirt-thigh-highs-artwork-drawing-digital-art-illustration-thumbnail.jpg"
+                    image: " https://drive.google.com/file/d/14NYGpUyvD2J-w6w6_fhGlTSsdXC9UUFq/view?usp=drive_link"
                 }
             }
         },
         {
             "name": "JoJo's Bizarre Adventure",
-            "image": "https://external-preview.redd.it/rF5X4XRrAwjOpUq46-F9IVi14uM-WPyIaNfyL-7d4uM.jpg?auto=webp&s=6e9c2204db86760b532f7808b210a1fd34f2fedf",
+            "image": "https://drive.google.com/file/d/1vKB8HFavVvw1E9terRMikAxpOdf4n3du/view?usp=drive_link",
             "characters": {
                 "protagonist": {
                     name: " Josuke Higashikata",
-                    image: " https://w0.peakpx.com/wallpaper/970/717/HD-wallpaper-josuke-aesthetic-jojo-bizarre-adventure-crazy-diamond-josuke-higashikata-thumbnail.jpg"
+                    image: " https://drive.google.com/file/d/1WIivAgyzk71MBdXiG0FHhIR4Clc3I4sE/view?usp=drive_link"
                 },
                 "antagonist": {
                     name: " Enrico Pucci",
-                    image: " https://static.jojowiki.com/images/0/05/latest/20220427004019/EnricoPucci_jojoeoh.png"
+                    image: " https://drive.google.com/file/d/1TvGCM714N9AsaCoVV2mpdgRWDTGVn6Y0/view?usp=drive_link"
                 },
                 "waifu": {
                     name: "Trish Una",
-                    image: " https://w0.peakpx.com/wallpaper/110/231/HD-wallpaper-trish-una-golden-wind-jojo-jojo-bizarre-adventure-jojo-kimyou-na-bouken-ougon-na-kaze-spice-girl-spicy-lady-vento-aureo-thumbnail.jpg"
+                    image: " https://drive.google.com/file/d/1TyGaLMpuoz2ziRp3y6zvyB67m1_lilcq/view?usp=drive_link"
                 }
             }
         },
         {
             "name": "bleach",
-            "image": "https://w0.peakpx.com/wallpaper/84/442/HD-wallpaper-ichigo-anime-anime-bleach-black-bleach-ichigo-demon-thumbnail.jpg",
+            "image": "https://drive.google.com/file/d/1PoO4A3-gKxvG1KaRoaNZ-T__RqtvF1dv/view?usp=drive_link",
             "characters": {
                 "protagonist": {
                     name: " Ichigo Kurosaki",
-                    image: " https://w0.peakpx.com/wallpaper/496/128/HD-wallpaper-ichigo-anime-black-bleach-ichigo-kurosaki-thumbnail.jpg"
+                    image: " https://drive.google.com/file/d/16YXvm_O0thBMvEQIK5AtscO40hlHCLyI/view?usp=drive_link"
                 },
                 "antagonist": {
                     name: " aizen",
-                    image: "https://w0.peakpx.com/wallpaper/894/272/HD-wallpaper-aizen-sosuke-art-anime-bleach-thumbnail.jpg"
+                    image: "https://drive.google.com/file/d/1okAPKxi1xVdaO0qLToo7l6yTx4rdEZOb/view?usp=drive_link"
                 },
                 "waifu": {
                     name: "Yoruichi Shihōin",
-                    image: " https://w0.peakpx.com/wallpaper/77/724/HD-wallpaper-yoruichi-bleach-thumbnail.jpg"
+                    image: " https://drive.google.com/file/d/1ka2gIZBXWsOM3t2m5CnI0l6nfp6UyIaN/view?usp=sharing"
                 }
             }
         },
         {
             "name": "Dragon Ball Z: Bardock ",
-            "image": "https://w0.peakpx.com/wallpaper/297/897/HD-wallpaper-bardock-ball-dragon-dragon-ball-dragon-ball-z-final-sayian-gokus-dad-legend-sayian-elite-super-sayian-bardock-thumbnail.jpg",
+            "image": "https://drive.google.com/file/d/1HBR8sSBmTC1Bz3pMIC0rGLppNV4YJ8TY/view?usp=drive_link",
             "characters": {
                 "protagonist": {
                     name: "Bardock",
-                    image: " https://w0.peakpx.com/wallpaper/523/96/HD-wallpaper-bardock-dragon-ball-dragon-ball-z-legends-thumbnail.jpg"
+                    image: " https://drive.google.com/file/d/1xM_m0r_PGdfPHdWx_KR33A7RlxGFjhsu/view?usp=drive_link"
                 },
                 "antagonist": {
                     name: " Frieza",
-                    image: "https://w0.peakpx.com/wallpaper/880/118/HD-wallpaper-golden-frieza-ball-dragon-super-thumbnail.jpg"
+                    image: "https://drive.google.com/file/d/1VPsKZTjKHUFx-PIIPLgQFlRWpqa3tW3q/view?usp=drive_link"
                 },
                 "waifu": {
                     name: "fasha",
-                    image: "https://pm1.aminoapps.com/7570/cf9727e78084e21b13cc91ff0b523d0c20a5fd34r1-340-531v2_uhq.jpg"
+                    image: "https://drive.google.com/file/d/1HBwnFfbBUFj4GgrF-nO3m5POMamwczeZ/view?usp=drive_link"
                 }
             }
         },
         {
             "name": "Hunter x Hunter",
-            "image": " https://flxt.tmsimg.com/assets/p20421488_v_v8_ac.jpg",
+            "image": " https://drive.google.com/file/d/10kTauyAEkBXZBoP7EOeqXUOdMbBXv66k/view?usp=drive_link",
             "characters": {
                 "protagonist": {
                     name: "Gon Freecss",
-                    image: " https://w0.peakpx.com/wallpaper/830/669/HD-wallpaper-hxh-gon-green-one-thumbnail.jpg"
+                    image: " https://drive.google.com/file/d/1YA5j-xy8awUxwnkdcwuddRbSC7b905vy/view?usp=drive_link"
                 },
                 "antagonist": {
                     name: "Uvogin",
-                    image: "https://i.imgur.com/KUaYpgE.jpg"
+                    image: "https://drive.google.com/file/d/1lYlF54wsvZNdpXMgXdwPnan_yQ4MwbtI/view?usp=drive_link"
                 },
                 "waifu": {
                     name: "Machi Komacine",
-                    image: " https://static.wikia.nocookie.net/hunterxhunter/images/3/33/Machi_2011.png/revision/latest?cb=20170817184807&path-prefix=de"
+                    image: " https://drive.google.com/file/d/14vRXizzL2QQ-2VIDufBPKDqEWYlmyKaW/view?usp=drive_link"
                 }
             }
         },
         {
             "name": "Tokyo Ghoul: Jack",
-            "image": "https://bookupgdl.com.mx/wp-content/uploads/2022/05/9781421590578.jpg",
+            "image": "https://drive.google.com/file/d/1soML6IRLQ-vZ5Iuq0eekXjsduWxLqLts/view?usp=drive_link",
             "characters": {
                 "protagonist": {
-                    name: "Arima Kishou",
-                    image: "https://drive.google.com/file/d/1zCL-8a5RnoIoCvHIusYanOFfoUjMN6zk/view?usp=sharing"
+                    name: "Ken Kaneki",
+                    image: "https://drive.google.com/file/d/1rnQioLUv-yqA55KMlqmCsT2r97g92z0r/view?usp=drive_link"
                 },
                 "antagonist": {
                     name: "Uruka Minami",
-                    image: "https://static.wikia.nocookie.net/antagonists/images/6/6e/Tokyo-Ghoul-JACK-OVA-screenshot-22.jpg/revision/latest/scale-to-width-down/401?cb=20180324045041"
+                    image: "https://drive.google.com/file/d/19fUwWb_pe4DnN19PAPkYxkBKjNJfM-hr/view?usp=drive_link"
                 },
                 "waifu": {
                     name: "Kamishiro Rize",
-                    image: " https://w0.peakpx.com/wallpaper/777/631/HD-wallpaper-rize-kamishiro-anime-girl-thumbnail.jpg"
+                    image: " https://drive.google.com/file/d/1-b3GH2v_IYceUeF1BtpbfOxUz7w3Y5Oj/view?usp=drive_link"
                 }
             }
         },
         {
             "name": "Fullmetal Alchemist: Brotherhood",
-            "image": "https://w0.peakpx.com/wallpaper/529/326/HD-wallpaper-dark-vertical-fullmetal-alchemist-brotherhood-thumbnail.jpg",
+            "image": "https://drive.google.com/file/d/1m_6bmVEjdLB0EK_2TAX11oNkyYopKRr-/view?usp=drive_link",
             "characters": {
                 "protagonist": {
                     name: "Edward Elric",
-                    image: " https://w0.peakpx.com/wallpaper/867/657/HD-wallpaper-edward-elric-alchemist-anime-blonde-brotherhood-cartoon-fma-fullmetal-super-thumbnail.jpg"
+                    image: " https://drive.google.com/file/d/1CmOqnKZs864sDR5twt1fXOHz7ugrEA8g/view?usp=drive_link"
                 },
                 "antagonist": {
-                    name: "Homunculi",
-                    image: "https://preview.redd.it/4hf2w68phz561.png?auto=webp&s=d6776dceaf3f0bb809156e5d6706a17eb0d34394"
+                    name: "homunculus",
+                    image: "https://drive.google.com/file/d/1tWdXfRjUJTvr_w_3mc7_Qnua-UoiRM0K/view?usp=drive_link"
                 },
                 "waifu": {
                     name: "Riza Hawkeye",
-                    image: "https://w0.peakpx.com/wallpaper/568/649/HD-wallpaper-anime-full-metal-alchemist-dog-riza-hawkeye-thumbnail.jpg"
+                    image: "https://drive.google.com/file/d/1g9Muuy0LaoYflVdt1j6ax44KNbKxMyFp/view?usp=drive_link"
                 }
             }
         },
@@ -621,15 +621,15 @@ async function add() {
             "characters": {
                 "protagonist": {
                     name: "light yagami",
-                    image: " https://w0.peakpx.com/wallpaper/791/228/HD-wallpaper-light-yagami-anime-death-note-deaths-detective-kira-police-ryuk-school-shinigami-thumbnail.jpg"
+                    image: " https://drive.google.com/file/d/1By9dvYrcaWLdWhyuZzSNl61jKKo8xnma/view?usp=drive_link"
                 },
                 "antagonist": {
                     name: "L Lawliet",
-                    image: "https://w0.peakpx.com/wallpaper/822/382/HD-wallpaper-death-note-l-lawliet-anime-thumbnail.jpg"
+                    image: "https://drive.google.com/file/d/11jbuqrxbex8LHsUh1Q0n_lyX-WWYpyjT/view?usp=drive_link"
                 },
                 "waifu": {
                     name: "misa amane",
-                    image: "https://w0.peakpx.com/wallpaper/4/778/HD-wallpaper-death-note-anime-chica-anime-kira-misa-misa-amane-misa-misa-ryuk-shinigami-thumbnail.jpg"
+                    image: "https://drive.google.com/file/d/1Zbm0nFK5lUVkw23SK76243i4KxeUj453/view?usp=drive_link"
                 }
             }
         }
