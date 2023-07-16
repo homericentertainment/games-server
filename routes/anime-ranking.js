@@ -184,18 +184,6 @@ module.exports = router
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 async function create4Animes() {
     const pazHomo = new AnimeRankingAnimeInfo({
         "name": "Naruto",
