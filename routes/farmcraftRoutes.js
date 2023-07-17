@@ -37,10 +37,9 @@ router.post('/create-farm', async (req, res) => {
         })
         await farm.save()
         return res.json(farm)
-        console.log('saved farm')
     } catch (err) {
-        return res.status(400).send('Something went wrong')
         console.log(err)
+        return res.status(400).send('Something went wrong')
     }
 })
 
@@ -53,11 +52,10 @@ router.post('/create-category', async (req, res) => {
         })
         await category.save()
         return res.json(category)
-        console.log('saved category')
     }
     catch (err) {
-        return res.status(400).send('Something went wrong')
         console.log(err)
+        return res.status(400).send('Something went wrong')
     }
 })
 
