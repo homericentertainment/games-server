@@ -8,6 +8,7 @@ const mongoose = require('mongoose')
 const utils = require('./routes/util-routes')
 const animeRecipes = require('./routes/anime-recipes')
 const animeRanking = require('./routes/anime-ranking')
+const farmcraft = require('./routes/farmcraftRoutes')
 
 let keys = process.env.NODE_ENV === 'production' ? '' : require('./keys')
 const uri = `mongodb+srv://homericentertainment:${process.env.NODE_ENV === 'production' ? process.env.mongo : keys.mongo}@ganescluster.tyeeph2.mongodb.net/`
@@ -35,6 +36,7 @@ app.use(utils)
 app.use('/utils', utils)
 app.use('/anime-recipes', animeRecipes)
 app.use('/anime-ranking', animeRanking)
+app.use('/farmcraft', farmcraft)
 
 app.use((req, res, next) => {
   const error = new Error('Not found')

@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const RecipeInfo = require('../data/anime-recips/recipe')
+const RecipeInfo = require('../data/anime-recips/recipe-info')
 
 router.get('/get-recipes', async (req, res) => {
     try {
@@ -14,7 +14,7 @@ router.get('/get-recipes', async (req, res) => {
 router.get('/get-recipes-from/:animeName', async (req, res) => {
     try {
         const { animeName } = req.params
-        const recipes = await RecipeInfo.find({animeName:anime})
+        const recipes = await RecipeInfo.find({animeName})
         res.json(recipes)
     } catch (err) {
         res.status(400).send('Something went wrong')

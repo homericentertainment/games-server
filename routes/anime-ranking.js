@@ -6,69 +6,7 @@ const AnimeRankingAnimeInfo = require('../data/anime-ranking/animeInfo')
 const cron = require('node-cron')
 cron.schedule('59 23 * * *', generateNewEvent)
 // generateNewEvent()
-
-async function generateNewEvent() {
-    const questions = [
-        //general
-        ['best story', 'best animations', 'best openings', 'best anime overall', 'best soundtrack', 'best voice actors', 'best side characters'],
-        //charactres
-        ['best protagonist', 'best antagonist', 'best waifu'],
-    ]
-
-    const randomIndex1 = Math.floor(Math.random() * (questions.length))
-    const randomIndex2 = Math.floor(Math.random() * (questions[randomIndex1].length))
-    const randomQuestion = questions[randomIndex1][randomIndex2]
-
-    try {
-        await AnimeRankingEventInfo.updateMany({ status: 'current' }, { status: 'ended' })
-        const animes = await AnimeRankingAnimeInfo.find({})
-        const newEvent = new AnimeRankingEventInfo({
-            "title": randomQuestion,
-            "participants": getParticipants(animes, randomQuestion, randomIndex1, 16),
-            "status": "current"
-        })
-        await newEvent.save()
-        console.log('generated next event:', randomQuestion)
-    }
-    catch (err) {
-        console.log(err)
-    }
-}
-
-function getParticipants(animes, question, idx, participantsAmount) {
-    const participants = {}
-    if (idx === 0) while (Object.keys(participants).length < participantsAmount) {
-        const r = Math.floor(Math.random() * animes.length)
-        const anime = animes[r]
-        const participant = {
-            name: anime.name,
-            image: anime.image,
-            from: anime.name,
-            animeImage: anime.image,
-            votes: 0
-        }
-        participants[anime.name] = participant
-    }
-    else if (idx === 1) {
-        let key = ''
-        if (question === 'best protagonist') key = 'protagonist'
-        else if (question === 'best antagonist') key = 'antagonist'
-        else key = 'waifu'
-        while (Object.keys(participants).length < participantsAmount) {
-            const r = Math.floor(Math.random() * animes.length)
-            const anime = animes[r]
-            const participant = {
-                name: anime.characters[key].name,
-                image: anime.characters[key].image,
-                from: anime.name,
-                animeImage: anime.image,
-                votes: 0
-            }
-            participants[anime.characters[key].name] = participant
-        }
-    }
-    return participants
-}
+// replaceAllUrls()
 
 router.get('/get-user/:id', async (req, res) => {
     const { id } = req.params
@@ -169,5 +107,104 @@ router.post('/create-event', async (req, res) => {
 })
 
 module.exports = router
+
+
+async function replaceAllUrls() {
+    try{
+        const animes = await AnimeRankingAnimeInfo.find({})
+    animes.forEach(async(a) => {
+        let image = a.image
+        image = replaceUrl(image)
+        if(image === 0) return
+        let characters = a.characters
+        for(const key in characters) {
+            let character = characters[key]
+            let characterImage = character.image
+            character.image = replaceUrl(characterImage)
+            if(character.image === 0) return
+        }
+        await AnimeRankingAnimeInfo.updateOne({name: a.name}, {image, characters})
+    })
+    }
+    catch(err) {
+        console.log(err)
+    } 
+}
+
+function replaceUrl(url) {
+    const fileIdStartIndex = url.indexOf('/file/d/') + 8;
+    const fileIdEndIndex = url.indexOf('/view');
+
+    if (fileIdStartIndex === -1 || fileIdEndIndex === -1) return 0;
+
+    const fileId = url.substring(fileIdStartIndex, fileIdEndIndex);
+    const directURL = `https://drive.google.com/uc?export=download&id=${fileId}`;
+    return directURL;
+}
+
+
+async function generateNewEvent() {
+    const questions = [
+        //general
+        ['best story', 'best animations', 'best openings', 'best anime overall', 'best soundtrack', 'best voice actors', 'best side characters'],
+        //charactres
+        ['best protagonist', 'best antagonist', 'best waifu'],
+    ]
+
+    const randomIndex1 = Math.floor(Math.random() * (questions.length))
+    const randomIndex2 = Math.floor(Math.random() * (questions[randomIndex1].length))
+    const randomQuestion = questions[randomIndex1][randomIndex2]
+
+    try {
+        await AnimeRankingEventInfo.updateMany({ status: 'current' }, { status: 'ended' })
+        const animes = await AnimeRankingAnimeInfo.find({})
+        const newEvent = new AnimeRankingEventInfo({
+            "title": randomQuestion,
+            "participants": getParticipants(animes, randomQuestion, randomIndex1, 32),
+            "status": "current"
+        })
+        await newEvent.save()
+        console.log('generated next event:', randomQuestion)
+    }
+    catch (err) {
+        console.log(err)
+    }
+}
+
+function getParticipants(animes, question, idx, participantsAmount) {
+    const participants = {}
+    if (idx === 0) while (Object.keys(participants).length < participantsAmount) {
+        const r = Math.floor(Math.random() * animes.length)
+        const anime = animes[r]
+        const participant = {
+            name: anime.name,
+            image: anime.image,
+            from: anime.name,
+            animeImage: anime.image,
+            votes: 0
+        }
+        participants[anime.name] = participant
+    }
+    else if (idx === 1) {
+        let key = ''
+        if (question === 'best protagonist') key = 'protagonist'
+        else if (question === 'best antagonist') key = 'antagonist'
+        else key = 'waifu'
+        while (Object.keys(participants).length < participantsAmount) {
+            const r = Math.floor(Math.random() * animes.length)
+            const anime = animes[r]
+            const participant = {
+                name: anime.characters[key].name,
+                image: anime.characters[key].image,
+                from: anime.name,
+                animeImage: anime.image,
+                votes: 0
+            }
+            participants[anime.characters[key].name] = participant
+        }
+    }
+    return participants
+}
+
 
 
