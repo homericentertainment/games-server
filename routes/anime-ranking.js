@@ -3,9 +3,10 @@ const router = express.Router()
 const AnimeRankingUserInfo = require('../data/anime-ranking/userInfo')
 const AnimeRankingEventInfo = require('../data/anime-ranking/eventInfo')
 const AnimeRankingAnimeInfo = require('../data/anime-ranking/animeInfo')
+const ObjectId = require('mongoose').Types.ObjectId
 const cron = require('node-cron')
 cron.schedule('59 23 * * *', generateNewEvent)
-generateNewEvent()
+// generateNewEvent()
 // replaceAllUrls()
 
 router.get('/get-user/:id', async (req, res) => {
@@ -84,14 +85,11 @@ router.delete('/delete-saved-anime', async (req, res) => {
 })
 
 router.put('/vote/:id', async (req, res) => {
-    console.log('vote')
     const { id } = req.params
     const { chosen, eventId } = req.body
     try {
         const event = await AnimeRankingEventInfo.findOne({ status: "current" })
-        console.log(event._id, ObjectId(eventId))
-        console.log(event._id === ObjectId(eventId))
-        console.log(event._id === (eventId))
+        if(event._id != eventId) throw new Error('Event is not current')
         const participants = event.participants
         participants[chosen].votes += 1
         const voters = event.voters
