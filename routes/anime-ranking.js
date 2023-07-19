@@ -97,7 +97,8 @@ router.put('/vote/:id', async (req, res) => {
         await AnimeRankingEventInfo.updateOne({ status: "current" }, { participants, voters })
         return res.json(true)
     }
-    catch {
+    catch (err){
+        console.log(err)
         return res.status(400).send('Something went wrong')
     }
 })
