@@ -6,7 +6,7 @@ const AnimeRankingAnimeInfo = require('../data/anime-ranking/animeInfo')
 const ObjectId = require('mongoose').Types.ObjectId
 const cron = require('node-cron')
 cron.schedule('59 23 * * *', generateNewEvent)
-generateNewEvent()
+// generateNewEvent()
 // replaceAllUrls()
 
 router.get('/get-user/:id', async (req, res) => {
@@ -163,7 +163,7 @@ async function generateNewEvent() {
         const animes = await AnimeRankingAnimeInfo.find({})
         const newEvent = new AnimeRankingEventInfo({
             "title": randomQuestion,
-            "participants": getParticipants(animes, randomQuestion, randomIndex1, 4),
+            "participants": getParticipants(animes, randomQuestion, randomIndex1, 32),
             "status": "current"
         })
         await newEvent.save()
