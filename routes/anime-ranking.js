@@ -89,7 +89,7 @@ router.put('/vote/:id', async (req, res) => {
     const { chosen, eventId } = req.body
     try {
         const event = await AnimeRankingEventInfo.findOne({ status: "current" })
-        cunsole.log(event._id, eventId)
+        console.log(event._id, eventId)
         const participants = event.participants
         participants[chosen].votes += 1
         const voters = event.voters
