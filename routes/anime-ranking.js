@@ -5,7 +5,7 @@ const AnimeRankingEventInfo = require('../data/anime-ranking/eventInfo')
 const AnimeRankingAnimeInfo = require('../data/anime-ranking/animeInfo')
 const cron = require('node-cron')
 cron.schedule('59 23 * * *', generateNewEvent)
-// generateNewEvent()
+generateNewEvent()
 // replaceAllUrls()
 
 router.get('/get-user/:id', async (req, res) => {
@@ -84,10 +84,12 @@ router.delete('/delete-saved-anime', async (req, res) => {
 })
 
 router.put('/vote/:id', async (req, res) => {
+    console.log('vote')
     const { id } = req.params
-    const { chosen } = req.body
+    const { chosen, eventId } = req.body
     try {
         const event = await AnimeRankingEventInfo.findOne({ status: "current" })
+        cunsole.log(event._id, eventId)
         const participants = event.participants
         participants[chosen].votes += 1
         const voters = event.voters
@@ -110,25 +112,25 @@ module.exports = router
 
 
 async function replaceAllUrls() {
-    try{
+    try {
         const animes = await AnimeRankingAnimeInfo.find({})
-    animes.forEach(async(a) => {
-        let image = a.image
-        image = replaceUrl(image)
-        if(image === 0) return
-        let characters = a.characters
-        for(const key in characters) {
-            let character = characters[key]
-            let characterImage = character.image
-            character.image = replaceUrl(characterImage)
-            if(character.image === 0) return
-        }
-        await AnimeRankingAnimeInfo.updateOne({name: a.name}, {image, characters})
-    })
+        animes.forEach(async (a) => {
+            let image = a.image
+            image = replaceUrl(image)
+            if (image === 0) return
+            let characters = a.characters
+            for (const key in characters) {
+                let character = characters[key]
+                let characterImage = character.image
+                character.image = replaceUrl(characterImage)
+                if (character.image === 0) return
+            }
+            await AnimeRankingAnimeInfo.updateOne({ name: a.name }, { image, characters })
+        })
     }
-    catch(err) {
+    catch (err) {
         console.log(err)
-    } 
+    }
 }
 
 function replaceUrl(url) {
@@ -160,7 +162,7 @@ async function generateNewEvent() {
         const animes = await AnimeRankingAnimeInfo.find({})
         const newEvent = new AnimeRankingEventInfo({
             "title": randomQuestion,
-            "participants": getParticipants(animes, randomQuestion, randomIndex1, 32),
+            "participants": getParticipants(animes, randomQuestion, randomIndex1, 4),
             "status": "current"
         })
         await newEvent.save()
