@@ -6,7 +6,7 @@ const AnimeRankingAnimeInfo = require('../data/anime-ranking/animeInfo')
 const ObjectId = require('mongoose').Types.ObjectId
 const cron = require('node-cron')
 cron.schedule('59 23 * * *', generateNewEvent)
-// generateNewEvent()
+generateNewEvent()
 // replaceAllUrls()
 
 router.get('/get-user/:id', async (req, res) => {
@@ -89,7 +89,7 @@ router.put('/vote/:id', async (req, res) => {
     const { chosen, eventId } = req.body
     try {
         const event = await AnimeRankingEventInfo.findOne({ status: "current" })
-        if(event._id != eventId) throw new Error('Event is not current')
+        // if(event._id != eventId) throw new Error('Event is not current')
         const participants = event.participants
         participants[chosen].votes += 1
         const voters = event.voters
