@@ -3,7 +3,8 @@ const router = express.Router()
 const AnimeRankingUserInfo = require('../data/anime-ranking/userInfo')
 const AnimeRankingEventInfo = require('../data/anime-ranking/eventInfo')
 const AnimeRankingAnimeInfo = require('../data/anime-ranking/animeInfo')
-const ObjectId = require('mongoose').Types.ObjectId
+const AnimeRankingQuestionInfo = require('../data/anime-ranking/questionInfo')
+
 const cron = require('node-cron')
 cron.schedule('59 23 * * *', generateNewEvent)
 // generateNewEvent()
@@ -97,7 +98,7 @@ router.put('/vote/:id', async (req, res) => {
         await AnimeRankingEventInfo.updateOne({ status: "current" }, { participants, voters })
         return res.json(true)
     }
-    catch (err){
+    catch (err) {
         console.log(err)
         return res.status(401).send('not same event')
     }
@@ -161,13 +162,17 @@ async function generateNewEvent() {
     try {
         await AnimeRankingEventInfo.updateMany({ status: 'current' }, { status: 'ended' })
         const animes = await AnimeRankingAnimeInfo.find({})
+        const questions = await AnimeRankingQuestionInfo.find({})
+        const randomMiniQuestionIdx = Math.floor(Math.random() * (questions.length))
+        const randomMiniQuestion = questions[randomMiniQuestionIdx]
         const newEvent = new AnimeRankingEventInfo({
             "title": randomQuestion,
             "participants": getParticipants(animes, randomQuestion, randomIndex1, 32),
-            "status": "current"
+            "status": "current",
+            "miniQuestion": randomMiniQuestion,
         })
         await newEvent.save()
-        console.log('generated next event:', randomQuestion)
+        console.log('generated next event:', randomMiniQuestion)
     }
     catch (err) {
         console.log(err)

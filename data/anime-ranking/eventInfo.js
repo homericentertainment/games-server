@@ -10,6 +10,10 @@ const eventSchema = new Schema({
         type: Object,
         required: true,
     },
+    miniQuestion: {
+        type: Object,
+        required: true,
+    },
     voters: {
         type: Object,
         required: false,
