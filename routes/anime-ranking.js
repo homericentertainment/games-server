@@ -4,10 +4,13 @@ const AnimeRankingUserInfo = require('../data/anime-ranking/userInfo')
 const AnimeRankingEventInfo = require('../data/anime-ranking/eventInfo')
 const AnimeRankingAnimeInfo = require('../data/anime-ranking/animeInfo')
 const AnimeRankingQuestionInfo = require('../data/anime-ranking/questionInfo')
-
 const cron = require('node-cron')
+const fetch = require('node-fetch')
 cron.schedule('59 23 * * *', generateNewEvent)
-// generateNewEvent()
+
+// checkGoogleDriveImage('https://lh3.google.com/u/0/d/1DUIOaT434KoxphEux2DevO-LtgMN9NAN', 'test')
+// 'https://lh3.google.com/u/0/d/1DUIOaT434KoxphEux2DevO-LtgMN9NAN'
+generateNewEvent()
 // replaceAllUrls()
 
 router.get('/get-user/:id', async (req, res) => {
@@ -19,6 +22,7 @@ router.get('/get-user/:id', async (req, res) => {
         return res.status(400).send('Something went wrong')
     }
 })
+
 
 router.post('/create-user', async (req, res) => {
     try {
@@ -160,17 +164,17 @@ async function generateNewEvent() {
     const randomQuestion = questions[randomIndex1][randomIndex2]
 
     try {
-        await AnimeRankingEventInfo.updateMany({ status: 'current' }, { status: 'ended' })
         const animes = await AnimeRankingAnimeInfo.find({})
         const questions = await AnimeRankingQuestionInfo.find({})
         const randomMiniQuestionIdx = Math.floor(Math.random() * (questions.length))
         const randomMiniQuestion = questions[randomMiniQuestionIdx]
         const newEvent = new AnimeRankingEventInfo({
             "title": randomQuestion,
-            "participants": getParticipants(animes, randomQuestion, randomIndex1, 32),
+            "participants": await getParticipants(animes, randomQuestion, randomIndex1, 32),
             "status": "current",
             "miniQuestion": randomMiniQuestion,
         })
+        await AnimeRankingEventInfo.updateMany({ status: 'current' }, { status: 'ended' })
         await newEvent.save()
         console.log('generated next event:', randomMiniQuestion)
     }
@@ -179,7 +183,7 @@ async function generateNewEvent() {
     }
 }
 
-function getParticipants(animes, question, idx, participantsAmount) {
+async function getParticipants(animes, question, idx, participantsAmount) {
     const participants = {}
     if (idx === 0) while (Object.keys(participants).length < participantsAmount) {
         const r = Math.floor(Math.random() * animes.length)
@@ -191,6 +195,8 @@ function getParticipants(animes, question, idx, participantsAmount) {
             animeImage: anime.image,
             votes: 0
         }
+        // const isValidPic = await checkGoogleDriveImage(participant.image, participant.name)
+        // if (isValidPic) participants[anime.name] = participant
         participants[anime.name] = participant
     }
     else if (idx === 1) {
@@ -208,10 +214,39 @@ function getParticipants(animes, question, idx, participantsAmount) {
                 animeImage: anime.image,
                 votes: 0
             }
+            // const isValidPic1 = await checkGoogleDriveImage(participant.image, participant.name)
+            // const isValidPic2 = await checkGoogleDriveImage(participant.animeImage, participant.name)
+            // if (isValidPic1 && isValidPic2) participants[anime.characters[key].name] = participant
             participants[anime.characters[key].name] = participant
         }
     }
     return participants
+}
+
+async function checkGoogleDriveImage(url, name) {
+    try {
+        // const exportDownloadParam = 'export=download&'
+        // const paramIndex = url.indexOf(exportDownloadParam)
+        // if (paramIndex === -1) return false
+        // const updatedLink = url.substring(0, paramIndex) + url.substring(paramIndex + exportDownloadParam.length)
+
+        // console.log(updatedLink)
+        const response = await fetch(url, { method: 'HEAD' })
+        console.log(response.status)
+        console.log(response.headers.get('content-type'))
+        if (response.ok && response.headers.get('content-type').startsWith('image/')) {
+            console.log('ok')
+            return true
+        }
+        else {
+            console.log('badddd', name)
+            return false
+        }
+    }
+    catch (err) {
+        console.log(err)
+        return false
+    }
 }
 
 
