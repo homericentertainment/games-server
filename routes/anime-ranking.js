@@ -8,10 +8,7 @@ const cron = require('node-cron')
 const fetch = require('node-fetch')
 cron.schedule('59 23 * * *', generateNewEvent)
 
-// checkGoogleDriveImage('https://lh3.google.com/u/0/d/1DUIOaT434KoxphEux2DevO-LtgMN9NAN', 'test')
-// 'https://lh3.google.com/u/0/d/1DUIOaT434KoxphEux2DevO-LtgMN9NAN'
-generateNewEvent()
-// replaceAllUrls()
+// generateNewEvent()
 
 router.get('/get-user/:id', async (req, res) => {
     const { id } = req.params
@@ -117,39 +114,6 @@ router.post('/create-event', async (req, res) => {
 module.exports = router
 
 
-async function replaceAllUrls() {
-    try {
-        const animes = await AnimeRankingAnimeInfo.find({})
-        animes.forEach(async (a) => {
-            let image = a.image
-            image = replaceUrl(image)
-            if (image === 0) return
-            let characters = a.characters
-            for (const key in characters) {
-                let character = characters[key]
-                let characterImage = character.image
-                character.image = replaceUrl(characterImage)
-                if (character.image === 0) return
-            }
-            await AnimeRankingAnimeInfo.updateOne({ name: a.name }, { image, characters })
-        })
-    }
-    catch (err) {
-        console.log(err)
-    }
-}
-
-function replaceUrl(url) {
-    const fileIdStartIndex = url.indexOf('/file/d/') + 8;
-    const fileIdEndIndex = url.indexOf('/view');
-
-    if (fileIdStartIndex === -1 || fileIdEndIndex === -1) return 0;
-
-    const fileId = url.substring(fileIdStartIndex, fileIdEndIndex);
-    const directURL = `https://drive.google.com/uc?export=download&id=${fileId}`;
-    return directURL;
-}
-
 
 async function generateNewEvent() {
     const questions = [
@@ -195,9 +159,8 @@ async function getParticipants(animes, question, idx, participantsAmount) {
             animeImage: anime.image,
             votes: 0
         }
-        // const isValidPic = await checkGoogleDriveImage(participant.image, participant.name)
-        // if (isValidPic) participants[anime.name] = participant
-        participants[anime.name] = participant
+        const isValidPic = await checkGoogleDriveImage(participant.image)
+        if (isValidPic) participants[anime.name] = participant
     }
     else if (idx === 1) {
         let key = ''
@@ -214,32 +177,31 @@ async function getParticipants(animes, question, idx, participantsAmount) {
                 animeImage: anime.image,
                 votes: 0
             }
-            // const isValidPic1 = await checkGoogleDriveImage(participant.image, participant.name)
-            // const isValidPic2 = await checkGoogleDriveImage(participant.animeImage, participant.name)
-            // if (isValidPic1 && isValidPic2) participants[anime.characters[key].name] = participant
-            participants[anime.characters[key].name] = participant
+            const isValidPic1 = await checkGoogleDriveImage(participant.image)
+            const isValidPic2 = await checkGoogleDriveImage(participant.animeImage)
+            if (isValidPic1 && isValidPic2) participants[anime.characters[key].name] = participant
         }
     }
     return participants
 }
 
-async function checkGoogleDriveImage(url, name) {
-    try {
-        // const exportDownloadParam = 'export=download&'
-        // const paramIndex = url.indexOf(exportDownloadParam)
-        // if (paramIndex === -1) return false
-        // const updatedLink = url.substring(0, paramIndex) + url.substring(paramIndex + exportDownloadParam.length)
+async function checkGoogleDriveImage(url) {
+    const idIndex = url.indexOf("id=")
+    if (idIndex === -1) return false
+    const fileId = url.substring(idIndex + 3)
+    const newLink = `https://lh3.google.com/u/0/d/${fileId}`
 
-        // console.log(updatedLink)
-        const response = await fetch(url, { method: 'HEAD' })
-        console.log(response.status)
-        console.log(response.headers.get('content-type'))
-        if (response.ok && response.headers.get('content-type').startsWith('image/')) {
-            console.log('ok')
+    try {
+        const res = await fetch(newLink, { method: 'GET' })
+        console.log(res.headers.get('content-type'))
+        if (res.ok) {
+            console.log('good', res.status)
             return true
         }
         else {
-            console.log('badddd', name)
+            console.log('badddd', res.status)
+            console.log('old:', url)
+            console.log('new:', newLink)
             return false
         }
     }
@@ -248,6 +210,39 @@ async function checkGoogleDriveImage(url, name) {
         return false
     }
 }
+
+// async function replaceAllUrls() {
+//     try {
+//         const animes = await AnimeRankingAnimeInfo.find({})
+//         animes.forEach(async (a) => {
+//             let image = a.image
+//             image = replaceUrl(image)
+//             if (image === 0) return
+//             let characters = a.characters
+//             for (const key in characters) {
+//                 let character = characters[key]
+//                 let characterImage = character.image
+//                 character.image = replaceUrl(characterImage)
+//                 if (character.image === 0) return
+//             }
+//             await AnimeRankingAnimeInfo.updateOne({ name: a.name }, { image, characters })
+//         })
+//     }
+//     catch (err) {
+//         console.log(err)
+//     }
+// }
+
+// function replaceUrl(url) {
+//     const fileIdStartIndex = url.indexOf('/file/d/') + 8;
+//     const fileIdEndIndex = url.indexOf('/view');
+
+//     if (fileIdStartIndex === -1 || fileIdEndIndex === -1) return 0;
+
+//     const fileId = url.substring(fileIdStartIndex, fileIdEndIndex);
+//     const directURL = `https://drive.google.com/uc?export=download&id=${fileId}`;
+//     return directURL;
+// }
 
 
 
