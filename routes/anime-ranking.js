@@ -8,7 +8,7 @@ const cron = require('node-cron')
 const fetch = require('node-fetch')
 cron.schedule('59 23 * * *', generateNewEvent)
 
-// generateNewEvent()
+generateNewEvent()
 
 router.get('/get-user/:id', async (req, res) => {
     const { id } = req.params
@@ -187,6 +187,7 @@ async function getParticipants(animes, question, idx, participantsAmount) {
 
 async function checkGoogleDriveImage(url) {
     const idIndex = url.indexOf("id=")
+    console.log(url)
     if (idIndex === -1) return false
     const fileId = url.substring(idIndex + 3)
     const newLink = `https://lh3.google.com/u/0/d/${fileId}`
